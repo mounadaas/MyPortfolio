@@ -1,0 +1,168 @@
+:root{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900:#302E4d;
+    --text-black-700:#504e70;
+    --skin-color:#ec1839;
+}
+body.dark{
+    --bg-black-900:#151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
+}
+/*start flex*/
+.d-flex{
+    display: flex;
+}
+.center-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-center {
+    text-align: center;
+} 
+/*end flex*/
+/* start color */
+/* background  */
+    .c-orang{
+        color:var(--skin-color);
+    }
+    .bg-orang{
+        background-color:var(--skin-color);
+    }
+    .bg-black-900{
+        background-color: var(--bg-black-900);
+    }
+    .shadaw-box{
+        box-shadow: 0 0 20px rgba(48,46,77,0.15);
+    }
+    .bg-black-100{
+        background-color: var(--bg-black-100);
+    }
+    .bg-black-50{
+        background-color: var(bg-black-50);
+    }
+/* colors*/
+    .c-black-50{
+        color: var(--bg-black-50);
+    }
+    .text-black-900{
+        color: var(--text-black-900);
+    }
+    .text-black-700{
+        color: var(--text-black-700);
+    }
+/* end color */
+/* ------------------------- */
+/*start padding*/
+.p-5{
+    padding: 5px;
+}
+.p-10{
+    padding: 10px;
+}
+.p-15{
+    padding: 15px;
+}
+.p-20{
+    padding: 20px;
+}
+.pt-5{
+    padding-top: 5px;
+}
+.pt-10{
+    padding-top: 10px;
+}
+.pt-15{
+    padding-top: 15px;
+}
+.pt-20{
+    padding-top: 20px;
+}
+.pb-5{
+    padding-bottom: 5px;
+}
+.pb-10{
+    padding-bottom: 10px;
+}
+.pb-15{
+    padding-bottom: 15px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+/*end padding*/
+/*start margin*/
+.mt-5{
+    margin-top: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-15{
+    margin-top: 15px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-15{
+    margin-bottom: 15px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+/*end margin*/
+/*start font size*/
+.fs-12{
+    font-size: 12px;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-15{
+    font-size: 15px;
+}
+/*end font size*/
+/*start  raduis */
+.rad-6{
+    border-radius: 6px;
+}
+.rad-20{
+    border-radius: 20px;
+}
+.outlin{
+    outline: none;
+}
+.rad-half{
+    border-radius: 50%;
+}
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    background: var(--skin-color);
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    transition: all 0.3s ease ;
+    border: none;
+}
+.btn:hover{
+    transform: scale(1.05);
+}
+/*end  raduis */
+
+.p-relative{
+    position: relative;
+}
