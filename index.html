@@ -299,26 +299,6 @@
                 <span class="color-5" onclick="setActiveStyle('color-5')"></span>
             </div>
         </div>
-    
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzUV1lqIB46KyBVSAOs2tr_9X_cbR0ycu9skpkaMuyEZm76aGf-OUPHtPu8-B_6TLzpWQ/exec'
-            const form = document.forms['submit-to-google-sheet']
-            const msg= document.getElementById('msg')
-        
-            form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    msg.innerHTML = "Thank you for your message!"
-                    setTimeout(function() {
-                        msg.innerHTML="";
-                        
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-            })
-        </script>
 
         <!--JS File-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>

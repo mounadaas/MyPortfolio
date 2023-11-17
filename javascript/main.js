@@ -80,3 +80,15 @@ function navSectionTogleBtn(){
         allSection[i].classList.toggle("open")
     }
 }
+
+/* ===================contact form================= */
+fetch("https://sendmail-api-docs.vercel.app/api/send", {
+        method: "POST",
+        body: JSON.stringify({
+            to: "mounadaas19@gmail.com",
+            subject: "Trying SendMail",
+            message: "Hello, you have received a new message!",
+        })
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
