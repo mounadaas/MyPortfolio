@@ -269,10 +269,10 @@
                         <h3 class="contact-title c-orang c-center mb-20">SEND ME AN EMAIL</h3>
                         <h4 class="contact-sub-title text-black-900 c-center ">I'M VERY RESPONSIVE TO MESSAGES</h4>  
                         <form class="inbox-me d-flex" name="submit-to-google-sheet" >  
-                                <input type="text" name="Name" class ="form-control mb-20" placeholder="Name">
-                                <input type="email" name="Email" class ="form-control mb-20" placeholder="Email">                   
-                                <input type="text" name="Subject" class ="form-control mb-20" placeholder="Subject">
-                                <textarea  name="Message" class ="form-control mb-20" cols="30" rows="10"placeholder="Message"></textarea>
+                                <input type="text" id="inputName" name="Name" class ="form-control mb-20" placeholder="Name" required>
+                                <input type="email" id="inputEmail" name="Email" class ="form-control mb-20" placeholder="Email" required>                   
+                                <input type="text" id="inputSubject" name="Subject" class ="form-control mb-20" placeholder="Subject" required>
+                                <textarea  name="Message" id="inputMessage" class ="form-control mb-20" cols="30" rows="10"placeholder="Message"></textarea>
                                 <button type="submit" class="mt-20  btn">Send Message</button>
                                 <span id="msg"></span>
                         </form>

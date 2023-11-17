@@ -82,12 +82,19 @@ function navSectionTogleBtn(){
 }
 
 /* ===================contact form================= */
+
+
+
+
 fetch("https://sendmail-api-docs.vercel.app/api/send", {
         method: "POST",
         body: JSON.stringify({
             to: "mounadaas19@gmail.com",
-            subject: "Trying SendMail",
-            message: "Hello, you have received a new message!",
+            name: document.getElementById("inputName").value,
+            email: document.getElementById("inputEmail").value,
+            subject: document.getElementById("inputSubject").value,
+            message: document.getElementById("inputMessage").value,
+            ,
         })
     })
     .then(res => res.json())
