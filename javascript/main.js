@@ -61,6 +61,7 @@ function updateNav(elem){
     }
     
 }
+
 document.querySelector(".hire-me").addEventListener("click", function(){
     let sectionIndex = this.getAttribute("data-section-index")
     showSection(this)
@@ -82,6 +83,7 @@ function navSectionTogleBtn(){
 }
 
 /* ===================contact form================= */
+let inputName = document.getElementById("inputName").value;
 
 
 
@@ -90,11 +92,8 @@ fetch("https://sendmail-api-docs.vercel.app/api/send", {
         method: "POST",
         body: JSON.stringify({
             to: "mounadaas19@gmail.com",
-            name: document.getElementById("inputName").value,
-            email: document.getElementById("inputEmail").value,
-            subject: document.getElementById("inputSubject").value,
-            message: document.getElementById("inputMessage").value,
-            ,
+            subject: inputName,
+            message: "Hello, you have received a new message!",
         })
     })
     .then(res => res.json())

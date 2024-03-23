@@ -165,9 +165,7 @@ color: var(--skin-color);
 }
 /* end nav bar  */
 /* start content div  */
-/* .all-section{
-    width: 100%;
-} */
+
 .content, .services, .portfolio, .contact{
     min-height: 100vh;
 }
@@ -202,9 +200,7 @@ justify-content: center;
     font-size: 30px;
     font-weight: 700;
 }
-.content .parent .descrption h3.my-job{
-    font-size: 30px;
-}
+
 .content .parent .descrption p{
     font-size: 20px;
     margin-bottom: 70px;
@@ -528,6 +524,7 @@ max-width: fit-content;
     .total-work .expert {
         flex-basis: 30%;
     }
+    
 }
 @media (max-width:991px){
     .content .parent .descrption{
@@ -542,6 +539,9 @@ max-width: fit-content;
     }
     .contact .social-icon .ico{
         flex-basis: 50%;
+    }
+    .content .parent .descrption h3.my-job{
+        font-size: 30px;
     }
 }
 @media (max-width:767px){
@@ -577,6 +577,12 @@ max-width: fit-content;
     text-align: center;
 }
 
+}
+@media (max-width:346px){
+   
+    .content .parent .descrption h3.my-job{
+        font-size: 20px;
+    }
 }
 
 
