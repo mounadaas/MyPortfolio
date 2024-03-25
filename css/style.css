@@ -487,6 +487,10 @@ flex-basis: 49%;
     color: var(--text-black-700);
     transition: 0.3s ease;
 }
+.inbox-me label{
+    color: var(--text-black-700);
+    padding: 5px 0 5px 20px;
+}
  .inbox-me textarea.form-control{
     height: 140px;
 }

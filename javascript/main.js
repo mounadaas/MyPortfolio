@@ -82,19 +82,58 @@ function navSectionTogleBtn(){
     }
 }
 
-/* ===================contact form================= */
-let inputName = document.getElementById("inputName").value;
 
 
 
 
-fetch("https://sendmail-api-docs.vercel.app/api/send", {
+    //===================Contact form =================
+    
+    const contactForm = document.querySelector(".contact-form")
+const fullNameInput = document.querySelector("#fullName")
+const emailAddressInput = document.querySelector("#emailAddress")
+const subjectInput = document.querySelector("#subject")
+const messageInput = document.querySelector("#message")
+
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const emailMessage = getEmailMessage({
+        fullName: fullNameInput.value,
+        emailAddress: emailAddressInput.value,
+        message: messageInput.value,
+        subject: subjectInput.value,
+    })
+
+    fetch("https://sendmail-api-docs.vercel.app/api/send", {
         method: "POST",
         body: JSON.stringify({
-            to: "mounadaas19@gmail.com",
-            subject: inputName,
-            message: "Hello, you have received a new message!",
+            to: "mounadaas19@gmail.com", // replace it with your email address (the email you want to receive messages at)
+            subject: "Message From Contact Form",
+            message: emailMessage,
         })
     })
-    .then(res => res.json())
-    .then(data => console.log(data))
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            fullNameInput.value = ""
+            emailAddressInput.value = ""
+            subjectInput.value= ""
+            messageInput.value = ""
+        })
+        console.log("data submitted")
+       
+
+    })
+    
+    const getEmailMessage = ({ fullName, emailAddress, message, subject } = {}) => {
+        return `
+        <p>You have received a new message from your contact form website:</p>
+        <div style="background-color:  #7950f2; color: #fbfbfb; padding: 12px">
+        <p style="margin: 0;">fullName: ${fullName}</p>
+        <p style="margin: 12px 0;">emailAddress: ${emailAddress}</p>
+        <p style="margin: 12px 0;">subject: ${subject}</p>
+        <p style="margin: 0;">message: ${message}</p>
+        </div>
+        `
+}
+    
+
